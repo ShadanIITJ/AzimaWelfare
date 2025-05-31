@@ -1,0 +1,7 @@
+# How to add a new event
+
+1. Create a new folder under `media/events/` (e.g., `media/events/charity_walk_2025`).
+2. Add images (jpg, png, etc.) to this folder.
+3. The event will appear automatically on the Events page.
+
+You can also add a text file (e.g., `description.txt`) in the event folder for future enhancements.

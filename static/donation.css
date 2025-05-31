@@ -1,0 +1,17 @@
+.donation-section {
+    background: #23272b;
+    color: #eaeaea;
+    border: 1px solid #333;
+}
+.donation-section h2, .donation-section p, .donation-section ul, .donation-section li, .donation-section a, .donation-section strong {
+    color: #eaeaea !important;
+}
+.donation-section .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+.donation-section .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
