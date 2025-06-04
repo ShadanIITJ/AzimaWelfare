@@ -1,0 +1,8 @@
+{
+    "name": "Sample Event Name",
+    "date": "2025-06-01",
+    "location": "Event Location, City",
+    "organizer": "Event Organizer Name",
+    "description": "This is a detailed description of the event. You can include multiple paragraphs and explain what the event was about, its impact, and any important highlights.",
+    "cover_image": "cover.jpg"
+}

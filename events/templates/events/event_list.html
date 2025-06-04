@@ -32,15 +32,53 @@
     </header>
     <main>        <div class="page-header-image">
             <img src="/media/ngo/Event.jpeg" alt="Events NGO" class="img-fluid rounded shadow">
-        </div>
-        <h2 class="text-center">Our Events</h2>
-        <ul class="list-group list-group-flush mt-4">
-            {% for event in events %}
-                <li class="list-group-item"><a href="/events/{{ event.slug }}/" class="text-decoration-none text-primary">{{ event.name }}</a></li>
+        </div>        <h2 class="text-center mb-4">Our Events</h2>
+        <div class="events-grid">
+            {% for event in events %}                <div class="event-card">
+                    <a href="/events/{{ event.slug }}/" class="text-decoration-none">
+                        <div class="event-image">
+                            {% if event.cover_image %}
+                                <img src="{{ event.cover_image }}" alt="{{ event.name }}" class="img-fluid">
+                            {% else %}
+                                <img src="/media/ngo/Event.jpeg" alt="{{ event.name }}" class="img-fluid">
+                            {% endif %}
+                            <div class="image-counter">
+                                <i class="bi bi-images"></i>
+                                <span>{{ event.image_count }} Photos</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>{{ event.name }}</h3>
+                            <div class="event-meta">
+                                {% if event.date %}
+                                    <div class="meta-item">
+                                        <i class="bi bi-calendar3"></i>
+                                        <span>{{ event.date }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if event.location %}
+                                    <div class="meta-item">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <span>{{ event.location }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            {% if event.description %}
+                                <p class="event-description">{{ event.description }}</p>
+                            {% endif %}
+                            <div class="view-more">
+                                <span>View Event Details</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             {% empty %}
-                <li class="list-group-item">No events found. Add event folders in media/events/.</li>
-            {% endfor %}
-        </ul>
+                <div class="text-center w-100 p-4">
+                    <i class="bi bi-calendar-x text-muted" style="font-size: 3rem;"></i>
+                    <p class="lead mt-3">No events found. Add event folders in media/events/.</p>
+                </div>
+            {% endfor %}        </div>
     </main>
     <footer>
         <p class="w-100 text-center m-0">&copy; 2025 Azima Nishat Welfare Trust. All rights reserved.</p>
