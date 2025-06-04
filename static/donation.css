@@ -2,9 +2,15 @@
     background: #23272b;
     color: #eaeaea;
     border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
 }
 .donation-section h2, .donation-section p, .donation-section ul, .donation-section li, .donation-section a, .donation-section strong {
     color: #eaeaea !important;
+}
+.donation-section h2 {
+    color: #198754;
 }
 .donation-section .btn-success {
     background-color: #28a745;
@@ -14,4 +20,68 @@
 .donation-section .btn-success:hover {
     background-color: #218838;
     border-color: #1e7e34;
+}
+
+/* Donation features styles */
+.donation-features i {
+    transition: transform 0.3s ease;
+}
+.donation-features div:hover i {
+    transform: scale(1.2);
+}
+
+/* Pulsing donate button animation */
+.pulse-button {
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 rgba(40, 167, 69, 0.4);
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+/* Icon hover effects */
+.bi-heart-fill, .bi-envelope-heart-fill {
+    transition: transform 0.3s ease;
+}
+.bi-heart-fill:hover, .bi-envelope-heart-fill:hover {
+    transform: scale(1.2);
+    color: #dc3545 !important;
+}
+
+.donation-features h4 {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #28a745;
+}
+
+.donation-section a:not(.btn) {
+    color: #28a745;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.donation-section a:not(.btn):hover {
+    color: #1e7e34;
+    text-decoration: underline;
+}
+
+/* Make icons larger on mobile */
+@media (max-width: 768px) {
+    .donation-features i {
+        font-size: 2.5rem !important;
+    }
+    
+    .bi-heart-fill, .bi-stars, .bi-envelope-heart-fill {
+        font-size: 1.2rem;
+    }
 }
